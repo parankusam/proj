@@ -1,4 +1,5 @@
-- hosts: all
+---
+- hosts: test
 
   become: yes
 
@@ -6,7 +7,7 @@
 
     - name: remove any previous app services
 
-      shell: | 
+      shell: |
 
          if [ `kubectl get deploy | grep -v NAME | awk '{print $1}' | grep myapp | wc -l` -gt 0 ]; then  
 
