@@ -10,4 +10,4 @@
             echo "No Service found"
          fi
     - name: deploy app
-      command: docker service create --name myapp --replicas 2 -p 9080:8080 parankusam/phpsample:{{ build }}
+      shell: docker service create --name myapp --replicas 2 -p 9080:8080 parankusam/phpsample:{{ build }}
