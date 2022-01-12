@@ -10,7 +10,7 @@
 
      dockercecliversion: 5:20.10.12~3-0~ubuntu-bionic
 
-     containerdioversion: 1.2.0-1
+     containerdioversion: 1.4.12-1
 
   tasks:
 
