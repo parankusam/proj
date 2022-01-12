@@ -7,12 +7,4 @@
 
     - name: deploy app
 
-      shell: kubectl create deploy myapp --image=parankusam/phpsample:{{ build }}
-
-    - name: increase replicas 
-
-      shell: kubectl scale deploy myapp --replicas=2
-
-    - name: deploy service
-
-      shell: kubectl expose deploy myapp --name myapp-svc --port 8080 --type NodePort
+      shell: docker servicce create --name myapp --replicas 2 -p 9090:3000 parankusam/phpsample:{{ build }}
