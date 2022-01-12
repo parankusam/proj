@@ -1,4 +1,5 @@
 FROM devopsedu/webapp
-ADD . /var/www/html
 RUN rm /var/www/html/index.html
-CMD apachectl -D FOREGROUND
+COPY . /var/www/html/
+EXPOSE 80
+CMD ["apache2ctl", "-D", "FOREGROUND"]
